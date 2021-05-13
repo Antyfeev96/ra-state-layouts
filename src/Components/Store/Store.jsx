@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import CardsView from '../Card/CardsView/CardsView';
 import IconSwitch from '../IconSwitch/IconSwitch';
+import ListView from '../List/ListView/ListView';
 
 export default class Store extends Component {
   constructor(props) {
@@ -50,7 +51,7 @@ export default class Store extends Component {
     return (
       <div className="store">
         <IconSwitch key="icon" icon={this.state.icon} onSwitch={this.onSwitch}/>
-        <CardsView cards={this.products} />
+        {this.state.icon === 'view_module' ? <CardsView cards={this.products} /> : <ListView items={this.products} />}
       </div>
     )
   }

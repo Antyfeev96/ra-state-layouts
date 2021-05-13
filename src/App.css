@@ -37,7 +37,26 @@
 
 .cards-view__card {
   width: 300px;
+  padding: 30px;
   background-color: rgb(247, 245, 245);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, .5);
+}
+
+.cards-view__card:nth-of-type(n + 4) {
+  margin-top: 30px;
+}
+
+.list-view__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: rgb(247, 245, 245);
+  height: 100px;
+}
+
+.list-view__item:nth-of-type(n + 2) {
+  margin-top: 10px;
 }
 
 .name {
@@ -51,7 +70,29 @@
   color: grey;
 }
 
-image {
+.cards-view__card .img {
   width: 100%;
 }
 
+.list-view__item .img {
+  width: 10%;
+}
+
+.price {
+  color: red;
+  font-size: 24px;
+}
+
+.button {
+  color: red;
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  float: right;
+}
+
+.button:hover {
+  cursor: pointer;
+}
